@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>d3.js test</title>
+    <style>
+      svg { width: 500px; height:500px; border: 1px solid red;}
+      .pie { fill: orange; stroke: black}
+    </style>
+
+    <script src="d3.v3.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>円グラフをアニメーション表示 p216</h1>
+
+    <svg id="myGraph"></svg>
+    <script src="js/sample10.js"></script>
+
+  </body>
+</html>
