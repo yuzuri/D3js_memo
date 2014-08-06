@@ -5,7 +5,6 @@
 <title>bitly link counts</title>
 <style>
 
-
 .background {
   fill: #eee;
 }
@@ -187,50 +186,7 @@ d3.json("miserables.json", function(miserables) {
 
 </script>
 
-<p class="attribution">Source: <a href="http://www-cs-staff.stanford.edu/~uno/sgb.html">The Stanford GraphBase</a>.
-
-<p>A network can be represented by an <i><a href="http://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a></i>, where each cell <i>ij</i> represents an edge from vertex <i>i</i> to vertex <i>j</i>. Here, vertices represent characters in a book, while edges represent co-occurrence in a chapter.
-
-<p>Given this two-dimensional representation of a graph, a natural visualization is to show the matrix! However, the effectiveness of a matrix diagram is heavily dependent on the order of rows and columns: if related nodes are placed closed to each other, it is easier to identify clusters and bridges.
-
-<p>This example lets you try different orderings via the drop-down menu. This type of diagram can be extended with manual reordering of rows and columns, and expanding or collapsing of clusters, to allow deeper exploration. <a href="http://en.wikipedia.org/wiki/Jacques_Bertin">Jacques Bertin</a> (or more specifically, his fleet of assistants) did this by hand with paper strips.
-
-<p>While path-following is harder in a matrix view than in a <a href="http://mbostock.github.com/d3/ex/force.html">node-link diagram</a>, matrices have other advantages. As networks get large and highly connected, node-link diagrams often devolve into giant hairballs of line crossings. Line crossings are impossible with matrix views. Matrix cells can also be encoded to show additional data; here color depicts clusters computed by a community-detection algorithm.
 
 
-<footer>
-  <script>
-window.GLOB = {}
-GLOB.fixPhrases = (function(){
-  var req, url;
-
-  url = '/hot_phrases';
-
-  req = $.ajax({
-    url: url
-  });
-
-  req.done(function(d) {
-    window.nodes = [];
-    $(d.data.phrases).each(function() {
-      return nodes.push({
-        name: this.phrase,
-        group: this.rate
-      });
-    });
-    $('.row text').each(function(i) {
-      return $(this).text(nodes[i].name);
-    });
-    return $('.column text').each(function(i) {
-      return $(this).text(nodes[i].name);
-    });
-  });
-})
-
-setTimeout(2000, GLOB.fixPhrases())
-
-
-
-  </script>
 </footer>
 
