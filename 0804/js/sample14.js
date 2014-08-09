@@ -13,7 +13,7 @@ var offsetX = 30;
 var offsetY = 30;
 
 // •\Ž¦‚·‚é‰~‚Ì”¼Œa
-var radius = 10;
+var radius = 30;
 
 var timeduration = 4000;
 
